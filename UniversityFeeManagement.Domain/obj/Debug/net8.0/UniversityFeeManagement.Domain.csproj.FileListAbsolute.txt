@@ -1,0 +1,11 @@
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/bin/Debug/net8.0/UniversityFeeManagement.Domain.deps.json
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/bin/Debug/net8.0/UniversityFeeManagement.Domain.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/bin/Debug/net8.0/UniversityFeeManagement.Domain.pdb
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.AssemblyInfoInputs.cache
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.AssemblyInfo.cs
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.csproj.CoreCompileInputs.cache
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/refint/UniversityFeeManagement.Domain.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.pdb
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/ref/UniversityFeeManagement.Domain.dll
