@@ -46,5 +46,10 @@ public class StudentRepository : IStudentRepository
             await _context.SaveChangesAsync();
         }
     }
+
+    public async Task<bool> EmailExistsAsync(string email)
+    {
+        return await _context.Students.AnyAsync(x => x.Email == email);
+    }
 }
     

@@ -9,4 +9,5 @@ public interface IStudentRepository
     Task AddAsync(Student student);
     Task UpdateAsync(Student student);
     Task DeleteAsync (int id);
+    Task<bool> EmailExistsAsync (string email); 
 }

@@ -50,6 +50,9 @@ public class StudentController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<StudentDto>> Create(CreateStudentDto dto)
     {
+        if (await _repo.EmailExistsAsync(dto.Email))
+        return BadRequest("Email already exists");
+
         var student = _mapper.Map<Student>(dto);
 
         await _repo.AddAsync(student);
