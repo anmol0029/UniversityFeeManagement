@@ -10,13 +10,13 @@ namespace UniversityFeeManagement.Infrastructure.Email;
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("your_email@gmail.com", "your_password"),
+                Credentials = new NetworkCredential("anmolgodara07@gmail.com", "mctt zdoi gwcw tuqi"),
                 EnableSsl = true
             };
 
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("your_email@gmail.com"),
+                From = new MailAddress("anmolgodara07@gmail.com"),
                 Subject = subject,
                 Body = message,
                 IsBodyHtml = true

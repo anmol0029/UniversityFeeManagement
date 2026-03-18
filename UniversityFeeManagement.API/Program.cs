@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UniversityFeeManagement.Application.Interfaces;
 using UniversityFeeManagement.Infrastructure.Data;
+using UniversityFeeManagement.Infrastructure.Email;
 using UniversityFeeManagement.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IFeeRepository, FeeRepository>();
+
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

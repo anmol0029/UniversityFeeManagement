@@ -13,3 +13,4 @@
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Application/obj/Debug/net8.0/refint/UniversityFeeManagement.Application.dll
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Application/obj/Debug/net8.0/UniversityFeeManagement.Application.pdb
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Application/obj/Debug/net8.0/ref/UniversityFeeManagement.Application.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Application/obj/Debug/net8.0/UniversityFeeManagement.Application.sourcelink.json

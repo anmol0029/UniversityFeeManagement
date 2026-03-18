@@ -114,3 +114,4 @@
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/UniversityFeeManagement.API.pdb
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/UniversityFeeManagement.API.genruntimeconfig.cache
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/ref/UniversityFeeManagement.API.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/UniversityFeeManagement.API.sourcelink.json

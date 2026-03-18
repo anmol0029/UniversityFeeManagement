@@ -17,3 +17,4 @@
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Infrastructure/obj/Debug/net8.0/UniversityFeeManagement.Infrastructure.pdb
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Infrastructure/obj/Debug/net8.0/UniversityFeeManagement.Infrastructure.genruntimeconfig.cache
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Infrastructure/obj/Debug/net8.0/ref/UniversityFeeManagement.Infrastructure.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Infrastructure/obj/Debug/net8.0/UniversityFeeManagement.Infrastructure.sourcelink.json

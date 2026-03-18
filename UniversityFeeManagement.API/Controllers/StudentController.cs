@@ -3,6 +3,7 @@ using UniversityFeeManagement.Application.DTOs;
 using UniversityFeeManagement.Application.Interfaces;
 using UniversityFeeManagement.Domain.Entities;
 using AutoMapper;
+using UniversityFeeManagement.Infrastructure.Email;
 
 namespace UniversityFeeManagement.API.Controllers;
 
@@ -12,11 +13,13 @@ public class StudentController : ControllerBase
 {
     private readonly IStudentRepository _repo;
     private readonly IMapper _mapper;
+    private readonly EmailService _emailService;
 
-    public StudentController(IStudentRepository repo, IMapper mapper)
+    public StudentController(IStudentRepository repo, IMapper mapper, EmailService emailService)
     {
         _repo = repo;
         _mapper = mapper;
+        _emailService = emailService;
     }
 
     
@@ -50,6 +53,12 @@ public class StudentController : ControllerBase
         var student = _mapper.Map<Student>(dto);
 
         await _repo.AddAsync(student);
+
+        await _emailService.SendEmailAsync(
+            dto.Email,
+            "Welcome",
+            "Your account has been created"
+        );
 
         var result = _mapper.Map<StudentDto>(student);
 

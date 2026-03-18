@@ -9,3 +9,4 @@
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/refint/UniversityFeeManagement.Domain.dll
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.pdb
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/ref/UniversityFeeManagement.Domain.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.Domain/obj/Debug/net8.0/UniversityFeeManagement.Domain.sourcelink.json
