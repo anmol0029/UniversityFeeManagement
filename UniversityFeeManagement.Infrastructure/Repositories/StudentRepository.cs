@@ -47,6 +47,12 @@ public class StudentRepository : IStudentRepository
         }
     }
 
+    public async Task<Student?> GetByEmailAsync(string email)
+   {
+      return await _context.Students
+          .FirstOrDefaultAsync(x => x.Email == email);
+    }
+
     public async Task<bool> EmailExistsAsync(string email)
     {
         return await _context.Students.AnyAsync(x => x.Email == email);

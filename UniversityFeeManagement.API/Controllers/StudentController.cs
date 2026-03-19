@@ -4,9 +4,10 @@ using UniversityFeeManagement.Application.Interfaces;
 using UniversityFeeManagement.Domain.Entities;
 using AutoMapper;
 using UniversityFeeManagement.Infrastructure.Email;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UniversityFeeManagement.API.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class StudentController : ControllerBase
@@ -22,17 +23,13 @@ public class StudentController : ControllerBase
         _emailService = emailService;
     }
 
-    
     [HttpGet]
     public async Task<ActionResult<IEnumerable<StudentDto>>> GetStudents()
     {
         var students = await _repo.GetAllAsync();
-        var result = _mapper.Map<IEnumerable<StudentDto>>(students);
-
-        return Ok(result);
+        return Ok(_mapper.Map<IEnumerable<StudentDto>>(students));
     }
 
-    
     [HttpGet("{id}")]
     public async Task<ActionResult<StudentDto>> GetStudent(int id)
     {
@@ -41,51 +38,62 @@ public class StudentController : ControllerBase
         if (student == null)
             return NotFound();
 
-        var result = _mapper.Map<StudentDto>(student);
-
-        return Ok(result);
+        return Ok(_mapper.Map<StudentDto>(student));
     }
 
-    
     [HttpPost]
     public async Task<ActionResult<StudentDto>> Create(CreateStudentDto dto)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
         if (await _repo.EmailExistsAsync(dto.Email))
-        return BadRequest("Email already exists");
+            return BadRequest("Email already exists");
 
         var student = _mapper.Map<Student>(dto);
 
         await _repo.AddAsync(student);
 
-        await _emailService.SendEmailAsync(
-            dto.Email,
-            "Welcome",
-            "Your account has been created"
-        );
+        try
+        {
+            await _emailService.SendEmailAsync(
+                dto.Email,
+                "Welcome",
+                "Your account has been created"
+            );
+        }
+        catch
+        {
+            
+        }
 
-        var result = _mapper.Map<StudentDto>(student);
-
-        return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, result);
+        return CreatedAtAction(nameof(GetStudent),
+            new { id = student.Id },
+            _mapper.Map<StudentDto>(student));
     }
 
-    
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateStudent(int id, StudentDto dto)
     {
         if (id != dto.Id)
             return BadRequest();
 
-        var student = _mapper.Map<Student>(dto);
+        var existing = await _repo.GetByIdAsync(id);
+        if (existing == null)
+            return NotFound();
 
-        await _repo.UpdateAsync(student);
+        await _repo.UpdateAsync(_mapper.Map<Student>(dto));
 
         return NoContent();
     }
 
-    
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteStudent(int id)
     {
+        var existing = await _repo.GetByIdAsync(id);
+        if (existing == null)
+            return NotFound();
+
         await _repo.DeleteAsync(id);
 
         return NoContent();

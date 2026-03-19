@@ -115,3 +115,14 @@
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/UniversityFeeManagement.API.genruntimeconfig.cache
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/ref/UniversityFeeManagement.API.dll
 /Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/obj/Debug/net8.0/UniversityFeeManagement.API.sourcelink.json
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/FluentValidation.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/anmol/UniversityFeeManagement/UniversityFeeManagement.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
