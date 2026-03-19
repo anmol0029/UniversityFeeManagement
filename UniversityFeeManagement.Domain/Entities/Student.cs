@@ -9,9 +9,9 @@ public class Student
 
     [Required]
     [MaxLength(100)]
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
     [EmailAddress]
-    public string Email { get; set; }
-    public ICollection<Fee> Fees { get; set; }
+    public string Email { get; set; } = string.Empty;
+    public ICollection<Fee>? Fees { get; set; }
 }

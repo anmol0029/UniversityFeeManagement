@@ -8,9 +8,9 @@ public class Course
     public int Id { get; set; }
 
     [Required]
-    public string CourseName { get; set; }
+    public string CourseName { get; set; } = string.Empty;
 
     [Range(0,1000000)]
     public decimal CourseFee { get; set; }
-    public ICollection<Fee> Fees { get; set; }
+    public ICollection<Fee>? Fees { get; set; }
 }
