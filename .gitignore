@@ -1,0 +1,16 @@
+# Build folders
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# User files
+*.user
+*.suo
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
