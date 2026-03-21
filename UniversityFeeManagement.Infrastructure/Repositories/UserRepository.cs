@@ -25,4 +25,20 @@ public class UserRepository : IUserRepository
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<bool> EmailExistsAsync(string email)
+    {
+          return await _context.Users.AnyAsync(x => x.Email == email);
+    }
+
+    public async Task UpdatePasswordAsync(string email, string newPasswordHash)
+   {
+       var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
+
+         if (user != null)
+         {
+             user.PasswordHash = newPasswordHash;
+             await _context.SaveChangesAsync();
+          }
+    }
 }
