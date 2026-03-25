@@ -7,6 +7,7 @@ using UniversityFeeManagement.Infrastructure.Data;
 using UniversityFeeManagement.Infrastructure.Email;
 using UniversityFeeManagement.Infrastructure.Repositories;
 using UniversityFeeManagement.Infrastructure.Middleware;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +45,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
-        )
+        ),
+        RoleClaimType = "role",
+        NameClaimType = ClaimTypes.Email
     };
 });
 
@@ -90,7 +93,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 
 app.UseAuthentication();   
